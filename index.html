@@ -1,0 +1,80 @@
+<!-- Jarod Burchill 
+	 assignment4 -->
+	 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jarod's Shoe Store</title>
+		<link rel="stylesheet" href="index.css"></link>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="index.js"></script> 
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$( function() {
+				var availableTags = [
+				  "Ontario",
+				  "Quebec",
+				  "Nova Scotia",
+				  "New Brunswick",
+				  "Manitoba",
+				  "British Columbia",
+				  "Prince Edward Island",
+				  "Saskatchewan",
+				  "Alberta",
+				  "Newfoundland and Labrador",
+				  "Northwest Territories",
+				  "Yukon",
+				  "Nunavut",
+				];
+				$( "#txtProvince" ).autocomplete({
+				  source: availableTags
+				});
+			  } );
+		</script>
+	</head>
+	<body>
+		<header>
+			<h3> Jarod's Shoe Store </h3>
+		</header>
+		<form name="orderForm" action="receipt.php" method="get">
+			<h2> Shoes </h2>
+			<section id="shoes">
+			<br>
+				Adidas NMD R2 - Black and Gum<br>
+				$250 CAD<br><br>
+				<img src="images/nmd.jpg"></img><br><br>
+				<input type="checkbox" id="nmdShoe" name="nmdShoe">Add to Order<br><br><br>
+				Adidas Tubular Doom Sockfit - Tan<br>
+				$170 CAD<br><br>
+				<img src="images/tubular.jpg"></img><br>
+				<input type="checkbox" id="tubularShoe" name="tubularShoe">Add to Order<br><br><br>
+				Adidas Yeezy Boost 350 - Turtle Dove<br>
+				$1250 CAD<br><br>
+				<img src="images/yeezy.jpg"></img><br><br><br>
+				<input type="checkbox" id="yeezyShoe" name="yeezyShoe">Add to Order<br>
+			</section>
+			<h2> Delivery </h2>
+			<section id="delivery">
+				<h1>First Name*</h1>
+				<input type="textbox" id="txtFirstName" name="txtFirstName">
+				<h1>Last Name*</h1>
+				<input type="textbox" id="txtLastName" name="txtLastName">
+				<h1>Address*</h1>
+				<input type="textbox" id="txtAddress" name="txtAddress">
+				<h1>City*</h1>
+				<input type="textbox" id="txtCity" name="txtCity">
+				<h1>Province*</h1>
+				<input type="textbox" id="txtProvince" name="txtProvince">
+				<h1>Postal Code*</h1>
+				<input type="textbox" id="txtPostalCode" name="txtPostalCode" oninput="PostalCodeValidation()">
+				<h1>Phone Number*</h1>
+				<input type="textbox" id="txtPhoneNumber" name="txtPhoneNumber" oninput="PhoneNumberValidation()">
+				<section id="errors"></section><br>
+				<input type="button" onclick="FormValidation()" value="Place Order"><br><br>
+				<p>* = Mandatory Fields</p><br>
+			</section>
+		</form>
+	</body>
+</html>

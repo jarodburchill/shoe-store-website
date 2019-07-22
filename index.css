@@ -1,0 +1,39 @@
+* {
+margin: 0;
+padding: 0;
+}
+html {
+	background-color: gray;
+}
+body {
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 800px;
+	margin: auto;
+	background-color: white;
+	border: 10px double black;
+}
+header {
+	border-bottom: 10px double black;
+	padding: 10px;
+}
+h1 {
+	font-size: 125%;
+	padding-top: 10px;
+}
+h2 {
+	border-bottom: 2px solid black;
+	padding-top: 10px;
+
+}
+h3 {
+	font-size: 200%;
+	text-align: center;
+}
+img {
+	width: 25%;
+	height: 25%;
+}
+#errors {
+	color: red;
+}
